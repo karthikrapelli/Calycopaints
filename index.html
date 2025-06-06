@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Calyco Paints - Innovative Paint & Sealer Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
     body {
@@ -72,7 +72,10 @@
       margin-bottom: 32px;
       box-shadow: 0 4px 6px rgba(30, 42, 56, 0.05);
     }
-    h1, h2 { color: #003d80; margin-top: 0; }
+    h1, h2 {
+      color: #003d80;
+      margin-top: 0;
+    }
     h1 {
       font-weight: 700;
       font-size: 2.5rem;
@@ -83,7 +86,10 @@
       font-size: 1.75rem;
       text-align: center;
     }
-    p, ul { max-width: 700px; margin: 0 auto; }
+    p, ul {
+      max-width: 700px;
+      margin: 0 auto;
+    }
     ul { padding-left: 1.2rem; }
     ul li { margin-bottom: 6px; }
     .faq-item {
@@ -137,6 +143,22 @@
       gap: 16px;
       margin-top: 12px;
     }
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 16px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .color-card {
+      text-align: center;
+    }
+    .color-swatch {
+      width: 100%;
+      height: 100px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
     @media (max-width: 720px) {
       .nav-menu { flex-wrap: wrap; gap: 12px; }
     }
@@ -161,7 +183,7 @@
       <li class="dropdown">
         <a href="#">Catalogue ▾</a>
         <ul class="dropdown-menu">
-          <li><a href="#">All</a></li>
+          <li><a href="#catalogue">All</a></li>
           <li><a href="#">Red</a></li>
           <li><a href="#">Orange</a></li>
           <li><a href="#">Yellow</a></li>
@@ -195,31 +217,117 @@
     </div>
   </header>
 
+  <!-- COLOUR CATALOGUE -->
+  <section id="catalogue">
+    <h2>Explore Our Colours</h2>
+    <div class="color-grid">
+      <div class="color-card"><div class="color-swatch" style="background-color: #8B0000;"></div><p>Royal Red</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #B22222;"></div><p>Brick Red</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #F5F5F5;"></div><p>Foam White</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #FFFFFF;"></div><p>Magical White</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #D3D3D3;"></div><p>Soft Grey</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #A9A9A9;"></div><p>Slate Grey</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #FFD700;"></div><p>Bright Gold</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #FAEBD7;"></div><p>Antique Beige</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #98FB98;"></div><p>Mint Green</p></div>
+      <div class="color-card"><div class="color-swatch" style="background-color: #ADD8E6;"></div><p>Sky Blue</p></div>
+    </div>
+  </section>
+
   <!-- FAQ SECTION -->
   <section>
     <h2>FAQs</h2>
 
-    <!-- Paint FAQs -->
-    <div class="faq-item"><div class="faq-question">What surfaces can I apply Calyco Paint to?</div><div class="faq-answer">Suitable for interior applications on plaster, drywall, brick, and previously painted walls. It can be used outdoors but is not fully recommended for long-term exterior exposure.</div></div>
-    <div class="faq-item"><div class="faq-question">Is the paint single-pack or two-pack?</div><div class="faq-answer">Our paint is single-pack (for standard coatings).</div></div>
-    <div class="faq-item"><div class="faq-question">How is the paint applied?</div><div class="faq-answer">Using a roller, brush, or airless spray depending on desired finish.</div></div>
-    <div class="faq-item"><div class="faq-question">What’s the recommended drying and recoating time for Calyco Paint?</div><div class="faq-answer">Touch dry: 30 mins to 2 hours. Recoatable after 1–2 hours. Drying time may vary with humidity and temperature.</div></div>
-    <div class="faq-item"><div class="faq-question">What is the coverage per liter or gallon?</div><div class="faq-answer">Approximately 10–12 m² per liter (1 coat).</div></div>
-    <div class="faq-item"><div class="faq-question">How can I get new colors for the paint?</div><div class="faq-answer">Use universal colorants (5%–10% by volume) and mix thoroughly into the base paint.</div></div>
-    <div class="faq-item"><div class="faq-question">I’ve applied Calyco Paint but the finish looks patchy—what went wrong?</div><div class="faq-answer">Patchiness may result from uneven absorbency, lack of primer, or over-brushing. Apply another even coat on a dry, dust-free, primed surface.</div></div>
-    <div class="faq-item"><div class="faq-question">Can Calyco Paint be used in high-humidity areas like kitchens and bathrooms?</div><div class="faq-answer">Yes, it resists light moisture. Use Stain & Sealer along edges for extra protection.</div></div>
-    <div class="faq-item"><div class="faq-question">What is the expected durability or lifespan of the paint?</div><div class="faq-answer">Typically 10+ years depending on traffic, usage, prep, and environmental exposure.</div></div>
+    <div class="faq-item">
+      <div class="faq-question">What surfaces can I apply Calyco Paint to?</div>
+      <div class="faq-answer">Suitable for interior applications on plaster, drywall, brick, and previously painted walls. It can be used outdoors but is not fully recommended for long-term exterior exposure.</div>
+    </div>
 
-    <!-- Stain & Sealer FAQs -->
-    <div class="faq-item"><div class="faq-question">Where should I use Calyco Stain & Sealer?</div><div class="faq-answer">Ideal for driveways, roofs, windows, doors, concrete joints, bathrooms, kitchens, wood, asphalt, and masonry. Compatible with wood, glass, PVC, concrete, ceramic, metal, and plaster.</div></div>
-    <div class="faq-item"><div class="faq-question">How do I achieve a clean, professional finish when applying Calyco Stain & Sealer?</div><div class="faq-answer">Clean and dry the surface. Stir well. Apply with brush, roller, or spray. Smooth while wet. Wipe excess and allow 24–48 hrs to cure.</div></div>
-    <div class="faq-item"><div class="faq-question">What are the advantages of using Calyco Stain & Sealer?</div><div class="faq-answer">Waterproofing, crack prevention, insulation, corrosion protection, mildew resistance across various surfaces like driveways, roofs, bathrooms, etc.</div></div>
-    <div class="faq-item"><div class="faq-question">How long does Calyco Stain & Sealer last once applied?</div><div class="faq-answer">5–10 years with proper application. Under harsh conditions, degradation may begin in 18 months.</div></div>
-    <div class="faq-item"><div class="faq-question">How long does it take to cure completely?</div><div class="faq-answer">Skins in 30 mins, recoatable in 2–4 hrs. Full cure in 24–48 hrs. Up to 72 hrs in humid environments.</div></div>
-    <div class="faq-item"><div class="faq-question">How is Calyco Stain & Sealer different from others?</div><div class="faq-answer">Combines UV resistance, moisture barrier, and easy application. Comparable to Penofin, Minwax, Spar Urethane.</div></div>
-    <div class="faq-item"><div class="faq-question">What are the best temperatures for applying Calyco Sealant?</div><div class="faq-answer">Between 5°C and 40°C. Avoid freezing or rainy conditions for proper curing.</div></div>
-    <div class="faq-item"><div class="faq-question">Is Calyco Stain & Sealer resistant to mold and mildew?</div><div class="faq-answer">Yes, it's formulated with anti-microbial agents to resist mold in humid areas.</div></div>
-    <div class="faq-item"><div class="faq-question">What surfaces should it NOT be used on?</div><div class="faq-answer">Avoid oily, greasy surfaces and areas under constant water immersion like swimming pools.</div></div>
+    <div class="faq-item">
+      <div class="faq-question">Is the paint single-pack or two-pack?</div>
+      <div class="faq-answer">Our paint is single-pack (for standard coatings).</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How is the paint applied?</div>
+      <div class="faq-answer">Using a roller, brush, or airless spray depending on desired finish.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What’s the recommended drying and recoating time for Calyco Paint?</div>
+      <div class="faq-answer">Touch dry: 30 mins to 2 hours. Recoatable after 1–2 hours. Drying time may vary with humidity and temperature.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the coverage per liter or gallon?</div>
+      <div class="faq-answer">Approximately 10–12 m² per liter (1 coat).</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How can I get new colors for the paint?</div>
+      <div class="faq-answer">Use universal colorants (5%–10% by volume) and mix thoroughly into the base paint.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">I’ve applied Calyco Paint but the finish looks patchy—what went wrong?</div>
+      <div class="faq-answer">Patchiness may result from uneven absorbency, lack of primer, or over-brushing. Apply another even coat on a dry, dust-free, primed surface.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can Calyco Paint be used in high-humidity areas like kitchens and bathrooms?</div>
+      <div class="faq-answer">Yes, it resists light moisture. Use Stain & Sealer along edges for extra protection.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the expected durability or lifespan of the paint?</div>
+      <div class="faq-answer">Typically 10+ years depending on traffic, usage, prep, and environmental exposure.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Where should I use Calyco Stain & Sealer?</div>
+      <div class="faq-answer">Ideal for driveways, roofs, windows, doors, concrete joints, bathrooms, kitchens, wood, asphalt, and masonry. Compatible with wood, glass, PVC, concrete, ceramic, metal, and plaster.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I achieve a clean, professional finish when applying Calyco Stain & Sealer?</div>
+      <div class="faq-answer">Clean and dry the surface. Stir well. Apply with brush, roller, or spray. Smooth while wet. Wipe excess and allow 24–48 hrs to cure.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What are the advantages of using Calyco Stain & Sealer?</div>
+      <div class="faq-answer">Waterproofing, crack prevention, insulation, corrosion protection, mildew resistance across various surfaces like driveways, roofs, bathrooms, etc.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does Calyco Stain & Sealer last once applied?</div>
+      <div class="faq-answer">5–10 years with proper application. Under harsh conditions, degradation may begin in 18 months.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How long does it take to cure completely?</div>
+      <div class="faq-answer">Skins in 30 mins, recoatable in 2–4 hrs. Full cure in 24–48 hrs. Up to 72 hrs in humid environments.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How is Calyco Stain & Sealer different from others?</div>
+      <div class="faq-answer">Combines UV resistance, moisture barrier, and easy application. Comparable to Penofin, Minwax, Spar Urethane.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What are the best temperatures for applying Calyco Sealant?</div>
+      <div class="faq-answer">Between 5°C and 40°C. Avoid freezing or rainy conditions for proper curing.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Is Calyco Stain & Sealer resistant to mold and mildew?</div>
+      <div class="faq-answer">Yes, it's formulated with anti-microbial agents to resist mold in humid areas.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What surfaces should it NOT be used on?</div>
+      <div class="faq-answer">Avoid oily, greasy surfaces and areas under constant water immersion like swimming pools.</div>
+    </div>
+
   </section>
 
   <!-- CONTACT -->
@@ -234,7 +342,6 @@
     </div>
   </section>
 
-  <!-- FAQ TOGGLE SCRIPT -->
   <script>
     document.querySelectorAll('.faq-question').forEach((q) => {
       q.addEventListener('click', () => {
