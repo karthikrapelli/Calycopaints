@@ -6,10 +6,7 @@
   <title>Calyco Paints - Innovative Paint & Sealer Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 20px;
@@ -21,8 +18,6 @@
       margin-right: auto;
       line-height: 1.6;
     }
-
-    /* === NAVBAR === */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -34,11 +29,7 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-
-    .nav-logo {
-      height: 50px;
-    }
-
+    .nav-logo { height: 50px; }
     .nav-menu {
       display: flex;
       list-style: none;
@@ -46,11 +37,7 @@
       margin: 0;
       padding: 0;
     }
-
-    .nav-menu li {
-      position: relative;
-    }
-
+    .nav-menu li { position: relative; }
     .nav-menu a {
       text-decoration: none;
       color: #1e2a38;
@@ -59,11 +46,7 @@
       padding: 8px 4px;
       transition: color 0.2s;
     }
-
-    .nav-menu a:hover {
-      color: #0056b3;
-    }
-
+    .nav-menu a:hover { color: #0056b3; }
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -76,18 +59,12 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       z-index: 1001;
     }
-
     .dropdown-menu li a {
       display: block;
       padding: 10px 16px;
       color: #003d80;
     }
-
-    .dropdown:hover .dropdown-menu {
-      display: block;
-    }
-
-    /* === SECTION CONTAINERS === */
+    .dropdown:hover .dropdown-menu { display: block; }
     header, section {
       background: rgba(255, 255, 255, 0.7);
       border-radius: 8px;
@@ -95,38 +72,20 @@
       margin-bottom: 32px;
       box-shadow: 0 4px 6px rgba(30, 42, 56, 0.05);
     }
-
-    h1, h2 {
-      color: #003d80;
-      margin-top: 0;
-    }
-
+    h1, h2 { color: #003d80; margin-top: 0; }
     h1 {
       font-weight: 700;
       font-size: 2.5rem;
       text-align: center;
     }
-
     h2 {
       font-weight: 600;
       font-size: 1.75rem;
       text-align: center;
     }
-
-    p, ul {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    ul li {
-      margin-bottom: 6px;
-    }
-
-    /* === PRODUCTS === */
+    p, ul { max-width: 700px; margin: 0 auto; }
+    ul { padding-left: 1.2rem; }
+    ul li { margin-bottom: 6px; }
     .products {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -134,7 +93,6 @@
       max-width: 800px;
       margin: 0 auto;
     }
-
     .product-card {
       background: rgba(255, 255, 255, 0.9);
       border-radius: 8px;
@@ -143,30 +101,24 @@
       display: flex;
       flex-direction: column;
     }
-
     .product-card img {
       width: 100%;
       height: 180px;
       object-fit: cover;
     }
-
     .product-content {
       padding: 16px 20px;
       flex-grow: 1;
     }
-
     .product-content h3 {
       margin-top: 0;
       margin-bottom: 8px;
       color: #0056b3;
     }
-
     .product-content ul {
       list-style: disc inside;
       margin: 0;
     }
-
-    /* === APPLICATIONS === */
     .applications {
       display: grid;
       grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
@@ -174,7 +126,6 @@
       max-width: 700px;
       margin: 0 auto;
     }
-
     .application-item {
       background: rgba(231, 240, 255, 0.8);
       color: #003d80;
@@ -185,40 +136,32 @@
       display: flex;
       align-items: center;
     }
-
     .application-item::before {
       content: "✅";
       margin-right: 8px;
     }
-
-    /* === TARGET CUSTOMERS === */
     .target-customers ul {
       list-style: disc inside;
       max-width: 400px;
       margin-left: auto;
       margin-right: auto;
     }
-
     .target-customers p {
       font-style: italic;
       color: #555;
       text-align: center;
     }
-
-    /* === FAQ === */
     .faq-item {
       max-width: 700px;
       margin: 16px auto;
       border-bottom: 1px solid #ddd;
     }
-
     .faq-question {
       font-weight: 600;
       cursor: pointer;
       padding: 12px 0;
       color: #0056b3;
     }
-
     .faq-answer {
       max-height: 0;
       overflow: hidden;
@@ -226,13 +169,10 @@
       color: #333;
       padding-bottom: 0;
     }
-
     .faq-item.open .faq-answer {
       max-height: 300px;
       padding-bottom: 12px;
     }
-
-    /* === BUTTONS === */
     .btn {
       display: inline-block;
       background: #0056b3;
@@ -246,180 +186,154 @@
       cursor: pointer;
       margin: 8px auto;
     }
-
-    .btn:hover, .btn:focus {
-      background: #003d80;
-    }
-
+    .btn:hover, .btn:focus { background: #003d80; }
     .btn-outline {
       background: transparent;
       border: 2px solid #0056b3;
       color: #0056b3;
     }
-
     .btn-outline:hover {
       background: #0056b3;
       color: white;
     }
-
     .contact-buttons {
       display: flex;
       justify-content: center;
       gap: 16px;
       margin-top: 12px;
     }
-
     @media (max-width: 720px) {
-      .products {
-        grid-template-columns: 1fr;
-      }
-
-      .nav-menu {
-        flex-wrap: wrap;
-        gap: 12px;
-      }
+      .products { grid-template-columns: 1fr; }
+      .nav-menu { flex-wrap: wrap; gap: 12px; }
     }
   </style>
 </head>
 <body>
-
-<!-- NAVIGATION BAR -->
-<nav class="navbar">
-  <div class="nav-left">
-    <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
-  </div>
-  <ul class="nav-menu">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About Us</a></li>
-    <li class="dropdown">
-      <a href="#">Coatings ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="#latex">Latex Paint</a></li>
-        <li><a href="#sealer">Stain & Sealer</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Investors</a></li>
-    <li><a href="#contact">Contacts</a></li>
-  </ul>
-</nav>
-
-<!-- HEADER -->
-<header>
-  <h1>Innovative Paint & Sealer Solutions</h1>
-  <p style="text-align:center; font-size: 1.2rem; color: #666;">Premium Protection. Lasting Results.</p>
-  <div style="text-align:center; margin-top: 16px;">
-    <a href="https://wa.me/919958966881" target="_blank" class="btn">Enquire on WhatsApp</a>
-  </div>
-</header>
-
-<!-- ABOUT -->
-<section>
-  <h2>About Calyco</h2>
-  <p>
-    Calyco delivers high-performance, cost-effective paints and coatings that protect and enhance residential, commercial, and industrial surfaces.
-    We don’t just produce coatings — we deliver trust, durability, and long-term value. Our low-VOC paints are engineered for eco-friendliness and multi-surface compatibility, ensuring lasting protection without compromise.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section>
-  <h2>Our Products</h2>
-  <div class="products">
-    <div class="product-card" id="latex">
-      <img src="latex.jpg" alt="Latex Paint" />
-      <div class="product-content">
-        <h3>Latex Paint</h3>
-        <p>Interior use, stain-blocking, washable, 10+ year durability</p>
-        <ul>
-          <li>Fresh formulation</li>
-          <li>Low-VOC & indoor safe</li>
-          <li>Smooth one-coat coverage</li>
-          <li>Water-based (easy cleanup)</li>
-        </ul>
-      </div>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
     </div>
-    <div class="product-card" id="Sealer">
-      <img src="Sealer.jpg" alt="Stain & Sealer" />
-      <div class="product-content">
-        <h3>Stain & Sealer</h3>
-        <p>Use on concrete, metal, wood; waterproof, UV-resistant, anti-corrosive</p>
-        <ul>
-          <li>Waterproof</li>
-          <li>UV-resistant</li>
-          <li>Multi-surface adhesion</li>
-          <li>Professional-grade protection</li>
+    <ul class="nav-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About Us</a></li>
+      <li class="dropdown">
+        <a href="#">Coatings ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="#latex">Latex Paint</a></li>
+          <li><a href="#sealer">Stain & Sealer</a></li>
         </ul>
-      </div>
+      </li>
+      <li><a href="#">Investors</a></li>
+      <li><a href="#contact">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Innovative Paint & Sealer Solutions</h1>
+    <p style="text-align:center; font-size: 1.2rem; color: #666;">Premium Protection. Lasting Results.</p>
+    <div style="text-align:center; margin-top: 16px;">
+      <a href="https://wa.me/919958966881" target="_blank" class="btn">Enquire on WhatsApp</a>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- APPLICATIONS -->
-<section id="applications">
-  <h2>Applications</h2>
-  <div class="applications">
-    <div class="application-item">Driveways & Parking Lots</div>
-    <div class="application-item">Fences & Decks</div>
-    <div class="application-item">Bathrooms & Kitchens</div>
-    <div class="application-item">Concrete Joints</div>
-    <div class="application-item">Metal Structures</div>
-    <div class="application-item">Windows & Doors</div>
-  </div>
-</section>
+  <!-- FAQ -->
+  <section>
+    <h2>FAQs</h2>
+    <div class="faq-item">
+  <div class="faq-question">What surfaces can I apply Calyco Paint to?</div>
+  <div class="faq-answer">Suitable for interior applications on plaster, drywall, brick, and previously painted walls. It can be used outdoors but is not fully recommended for long-term exterior exposure.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Is the paint single-pack or two-pack?</div>
+  <div class="faq-answer">Our paint is single-pack (for standard coatings).</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How is the paint applied?</div>
+  <div class="faq-answer">Using a roller, brush, or airless spray depending on desired finish.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What’s the recommended drying and recoating time for Calyco Paint?</div>
+  <div class="faq-answer">Touch dry: 30 mins to 2 hours. Recoatable after 1–2 hours. Avoid condensation until cured.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What is the coverage per liter or gallon?</div>
+  <div class="faq-answer">Approximately 10–12 m² per liter (1 coat).</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How can I get new colors for the paint?</div>
+  <div class="faq-answer">Use universal colorants (5%–10% by volume) and mix thoroughly into the base paint.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">I’ve applied Calyco Paint but the finish looks patchy—what went wrong?</div>
+  <div class="faq-answer">Patchiness may result from uneven absorbency, lack of primer, or over-brushing. Apply another even coat.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Can Calyco Paint be used in high-humidity areas like kitchens and bathrooms?</div>
+  <div class="faq-answer">Yes, it resists light moisture. Use Stain & Sealer along edges for extra protection.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What is the expected durability or lifespan of the paint?</div>
+  <div class="faq-answer">Typically 10+ years. Depends on usage, prep, and environment.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Where should I use Calyco Stain & Sealer?</div>
+  <div class="faq-answer">Ideal for driveways, roofs, concrete joints, wood, bathrooms, kitchens, windows, doors, etc.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How do I achieve a clean, professional finish when applying Stain & Sealer?</div>
+  <div class="faq-answer">Clean and dry the surface. Stir well. Apply with brush/roller/spray. Smooth while wet. Allow 24–48 hrs to cure.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What are the advantages of using Calyco Stain & Sealer?</div>
+  <div class="faq-answer">Waterproofing, crack prevention, insulation, corrosion protection, mildew resistance.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How long does Calyco Stain & Sealer last once applied?</div>
+  <div class="faq-answer">5–10 years with proper application. May degrade faster under harsh exposure.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How long does it take to cure completely?</div>
+  <div class="faq-answer">Skins in 30 mins, recoatable in 2–4 hrs. Full cure in 24–48 hrs. Up to 72 hrs in humid environments.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">How is Calyco Stain & Sealer different from others?</div>
+  <div class="faq-answer">Combines UV resistance, moisture barrier, easy use. Comparable to Penofin, Minwax, Spar Urethane.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What are the best temperatures for applying Calyco Sealant?</div>
+  <div class="faq-answer">Between 5°C and 40°C. Avoid freezing or rainy conditions for proper curing.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">Is Calyco Stain & Sealer resistant to mold and mildew?</div>
+  <div class="faq-answer">Yes, it's formulated with anti-microbial agents to resist mold in humid areas.</div>
+</div>
+<div class="faq-item">
+  <div class="faq-question">What surfaces should it NOT be used on?</div>
+  <div class="faq-answer">Avoid oily, greasy surfaces and areas under constant water immersion like swimming pools.</div>
+</div>
+  </section>
 
-<!-- TARGET CUSTOMERS -->
-<section class="target-customers">
-  <h2>Target Customers</h2>
-  <ul>
-    <li>OEMs</li>
-    <li>Real Estate Developers</li>
-    <li>Construction Contractors</li>
-    <li>Government & Institutional Buyers</li>
-  </ul>
-  <p>Minimum Order Quantity: 1,000 Liters (supplied in IBC Totes)</p>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" style="text-align:center;">
+    <h2>Contact Us</h2>
+    <p>B37, Sector 1, Noida, NCR</p>
+    <p>Phone: +91-99589-66881</p>
+    <p>Email: <a href="mailto:calycoproducts1@gmail.com">calycoproducts1@gmail.com</a></p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/919958966881" target="_blank" class="btn">WhatsApp</a>
+      <a href="mailto:calycoproducts1@gmail.com" class="btn btn-outline">Email</a>
+    </div>
+  </section>
 
-<!-- FAQ -->
-<section>
-  <h2>FAQs</h2>
-  <div class="faq-item">
-    <div class="faq-question">What surfaces can I apply Calyco Paint to?</div>
-    <div class="faq-answer">Interior walls, drywall, brick, plaster, and more.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Can I use it indoors safely?</div>
-    <div class="faq-answer">Yes. Calyco paints are low-VOC and safe for indoor spaces.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">What’s the coverage?</div>
-    <div class="faq-answer">10–12 m² per liter (1 coat).</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">How long does it last?</div>
-    <div class="faq-answer">10+ years indoors; 5–10 years for exterior use.</div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" style="text-align:center;">
-  <h2>Contact Us</h2>
-  <p>B37, Sector 1, Noida, NCR</p>
-  <p>Phone: +91-99589-66881</p>
-  <p>Email: <a href="mailto:calycoproducts1@gmail.com">calycoproducts1@gmail.com</a></p>
-  <div class="contact-buttons">
-    <a href="https://wa.me/919958966881" target="_blank" class="btn">WhatsApp</a>
-    <a href="mailto:calycoproducts1@gmail.com" class="btn btn-outline">Email</a>
-  </div>
-</section>
-
-<!-- SCRIPT for FAQ toggling -->
-<script>
-  document.querySelectorAll('.faq-question').forEach((q) => {
-    q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
+  <!-- FAQ TOGGLING SCRIPT -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach((q) => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('open');
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
