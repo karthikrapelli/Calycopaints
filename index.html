@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -7,10 +8,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       padding: 20px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       color: #1e2a38;
       background: url('Background.jpg') center center / cover no-repeat fixed;
       max-width: 960px;
@@ -18,6 +20,7 @@
       margin-right: auto;
       line-height: 1.6;
     }
+
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -29,42 +32,9 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
+
     .nav-logo { height: 50px; }
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: 24px;
-      margin: 0;
-      padding: 0;
-    }
-    .nav-menu li { position: relative; }
-    .nav-menu a {
-      text-decoration: none;
-      color: #1e2a38;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 8px 4px;
-      transition: color 0.2s;
-    }
-    .nav-menu a:hover { color: #0056b3; }
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 32px;
-      left: 0;
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      z-index: 1001;
-    }
-    .dropdown-menu li a {
-      display: block;
-      padding: 10px 16px;
-      color: #003d80;
-    }
-    .dropdown:hover .dropdown-menu { display: block; }
+
     header, section {
       background: rgba(255, 255, 255, 0.7);
       border-radius: 8px;
@@ -72,104 +42,96 @@
       margin-bottom: 32px;
       box-shadow: 0 4px 6px rgba(30, 42, 56, 0.05);
     }
+
     h1, h2 {
       color: #003d80;
+      text-align: center;
       margin-top: 0;
     }
-    h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      text-align: center;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 1.75rem;
-      text-align: center;
-    }
-    p, ul {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    ul { padding-left: 1.2rem; }
-    ul li { margin-bottom: 6px; }
-    .faq-item {
-      max-width: 700px;
-      margin: 16px auto;
-      border-bottom: 1px solid #ddd;
-    }
-    .faq-question {
-      font-weight: 600;
-      cursor: pointer;
-      padding: 12px 0;
-      color: #0056b3;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      color: #333;
-      padding-bottom: 0;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-      padding-bottom: 12px;
-    }
+
+    h1 { font-weight: 700; font-size: 2.5rem; }
+    h2 { font-weight: 600; font-size: 1.75rem; }
+
     .btn {
       display: inline-block;
       background: #0056b3;
       color: white;
-      text-decoration: none;
       padding: 12px 28px;
       border-radius: 6px;
       font-weight: 600;
+      text-decoration: none;
       transition: background-color 0.3s ease;
-      text-align: center;
-      cursor: pointer;
-      margin: 8px auto;
     }
-    .btn:hover, .btn:focus { background: #003d80; }
+
+    .btn:hover { background: #003d80; }
+
     .btn-outline {
       background: transparent;
       border: 2px solid #0056b3;
       color: #0056b3;
     }
+
     .btn-outline:hover {
       background: #0056b3;
       color: white;
     }
+
     .contact-buttons {
       display: flex;
       justify-content: center;
       gap: 16px;
       margin-top: 12px;
     }
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
-      max-width: 800px;
-      margin: 0 auto;
+
+    ul { max-width: 700px; margin: 0 auto; padding-left: 1.2rem; }
+    ul li { margin-bottom: 6px; }
+
+    .faq-question {
+      font-weight: 600;
+      cursor: pointer;
+      padding: 12px 0;
+      color: #0056b3;
     }
-    .color-card {
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      color: #333;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+      padding-bottom: 12px;
+    }
+
+    .button-container {
       text-align: center;
+      margin-top: 40px;
     }
-    .color-swatch {
-      width: 100%;
-      height: 100px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+
+    .apply-button {
+      background-color: #1a73e8;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
     }
-    @media (max-width: 720px) {
-      .nav-menu { flex-wrap: wrap; gap: 12px; }
-    }
+
+    .apply-button:hover { background-color: #0c5bd3; }
+
   </style>
 </head>
+
 <body>
-  <!-- NAVIGATION BAR -->
+
+  <!-- NAVBAR -->
   <nav class="navbar">
-    <div class="nav-left">
-      <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
-    </div>
+    <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
+  </nav>
 
   <!-- HEADER -->
   <header>
@@ -184,84 +146,45 @@
   <section id="latex">
     <h2>Latex Paint</h2>
     <img src="latex-paint.jpg" alt="Latex Paint" style="max-width: 100%; height: auto;" />
-    <p>Calyco Latex Paint offers superior coverage and exceptional durability for interior and exterior surfaces. Ideal for a variety of surfaces like plaster, drywall, and wood. It provides excellent protection against moisture and stains.</p>
+    <p>Calyco Latex Paint offers superior coverage and exceptional durability for interior and exterior surfaces. Ideal for plaster, drywall, and wood with excellent protection against moisture and stains.</p>
   </section>
 
   <!-- STAIN & SEALER SECTION -->
   <section id="sealer">
     <h2>Stain & Sealer</h2>
     <img src="stain-sealer.jpg" alt="Stain & Sealer" style="max-width: 100%; height: auto;" />
-    <p>Our Stain & Sealer provides long-lasting protection against stains, dirt, and moisture while offering a beautiful, glossy finish. Perfect for high-traffic areas and outdoor applications.</p>
+    <p>Our Stain & Sealer provides long-lasting protection against stains, dirt, and moisture while offering a beautiful, glossy finish. Perfect for outdoor use.</p>
   </section>
 
-  <!-- LATEX PAINT FAQ SECTION -->
-<section id="latex-faq">
-  <h2>Latex Paint FAQs</h2>
-  <ul>
-    <li><strong>What surfaces can I apply Calyco Paint to?</strong><br>
-      Interior surfaces like plaster, drywall, brick, and previously painted walls. Limited outdoor use recommended.
-    </li>
-    <li><strong>Is the paint single-pack or two-pack?</strong><br>
-      Single-pack for standard coatings.
-    </li>
-    <li><strong>How is the paint applied?</strong><br>
-      Roller, brush, or airless spray depending on finish.
-    </li>
-    <li><strong>What’s the drying and recoating time?</strong><br>
-      Touch dry in 30 min–2 hrs; recoat after 1–2 hrs at 20°C and low humidity.
-    </li>
-    <li><strong>What is the coverage per liter?</strong><br>
-      10–12 m² per liter (1 coat).
-    </li>
-    <li><strong>How can I get new colors?</strong><br>
-      Use 5–10% universal colorant compatible with base paint.
-    </li>
-    <li><strong>Why does the finish look patchy?</strong><br>
-      Could be due to uneven absorbency, no primer, or over-brushing. Apply another even coat.
-    </li>
-    <li><strong>Can it be used in humid areas?</strong><br>
-      Yes, but for heavy humidity/splashing, use Stain & Sealer along seams.
-    </li>
-    <li><strong>What is the expected durability?</strong><br>
-      10+ years with proper prep; varies by usage and environment.
-    </li>
-  </ul>
-</section>
+  <!-- LATEX FAQ -->
+  <section id="latex-faq">
+    <h2>Latex Paint FAQs</h2>
+    <ul>
+      <li><strong>Where can I use it?</strong> Interior plaster, drywall, brick, painted walls.</li>
+      <li><strong>Application?</strong> Roller, brush, or airless spray.</li>
+      <li><strong>Dry time?</strong> Touch dry in 30 min–2 hrs, recoat after 1–2 hrs.</li>
+      <li><strong>Coverage?</strong> 10–12 m² per liter (1 coat).</li>
+      <li><strong>New colors?</strong> Use universal colorant (5–10%).</li>
+      <li><strong>Patchy finish?</strong> Apply another even coat after primer.</li>
+      <li><strong>For humid areas?</strong> Use Stain & Sealer on seams.</li>
+      <li><strong>Durability?</strong> 10+ years with proper prep.</li>
+    </ul>
+  </section>
 
-<!-- STAIN & SEALER FAQ SECTION -->
-<section id="sealer-faq">
-  <h2>Stain & Sealer FAQs</h2>
-  <ul>
-    <li><strong>Where should I use Calyco Stain & Sealer?</strong><br>
-      On driveways, roofs, joints, windows, doors, masonry, wood, and more.
-    </li>
-    <li><strong>How to apply for a professional finish?</strong><br>
-      Clean surface, stir well, apply evenly, and allow 24–48 hrs to cure.
-    </li>
-    <li><strong>Advantages of using it?</strong><br>
-      Waterproofs, seals, resists mildew, UV, and harsh conditions.
-    </li>
-    <li><strong>How long does it last?</strong><br>
-      5–10 years under normal conditions; 18 months under extreme exposure.
-    </li>
-    <li><strong>How long does it take to cure?</strong><br>
-      Skins in 30 min, recoat in 2–4 hrs, full cure in 24–48 hrs.
-    </li>
-    <li><strong>How is it different from other brands?</strong><br>
-      Offers durability, UV protection, moisture resistance, easy application.
-    </li>
-    <li><strong>Best temperature range for application?</strong><br>
-      5°C to 40°C (41°F to 104°F); avoid freezing or heavy rain.
-    </li>
-    <li><strong>Is it mold and mildew resistant?</strong><br>
-      Yes, has anti-microbial properties for damp areas.
-    </li>
-    <li><strong>Where should it not be used?</strong><br>
-      Avoid oily surfaces and submerged areas like swimming pools.
-    </li>
-  </ul>
-</section>
-
+  <!-- SEALER FAQ -->
+  <section id="sealer-faq">
+    <h2>Stain & Sealer FAQs</h2>
+    <ul>
+      <li><strong>Where to use?</strong> Driveways, roofs, joints, windows, masonry, etc.</li>
+      <li><strong>Professional finish?</strong> Clean surface, stir, apply, 24–48 hrs cure.</li>
+      <li><strong>Benefits?</strong> Waterproofs, seals, UV & mildew resistance.</li>
+      <li><strong>Durability?</strong> 5–10 years (18 months extreme).</li>
+      <li><strong>Different from others?</strong> UV protection, easy application.</li>
+      <li><strong>Temperature?</strong> 5°C to 40°C ideal for application.</li>
+      <li><strong>Mold resistant?</strong> Yes, anti-microbial.</li>
+      <li><strong>Where NOT to use?</strong> Oily surfaces, swimming pools.</li>
+    </ul>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" style="text-align:center;">
@@ -271,44 +194,19 @@
     <p>Email: <a href="mailto:calycopaints@gmail.com">calycopaints@gmail.com</a></p>
     <div class="contact-buttons">
       <a href="https://wa.me/919958966881" target="_blank" class="btn">WhatsApp</a>
-      <a href="mailto:calycoproducts1@gmail.com" class="btn btn-outline">Email</a>
+      <a href="mailto:calycopaints@gmail.com" class="btn btn-outline">Email</a>
     </div>
   </section>
 
-<head>
-  <title>Dealer Application</title>
-  <style>
-    .button-container {
-      text-align: center;
-      margin-top: 100px; /* adjust as needed for spacing from the top */
-    }
-
-    .apply-button {
-      background-color: #1a73e8;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      transition: background-color 0.3s ease;
-    }
-
-    .apply-button:hover {
-      background-color: #0c5bd3;
-    }
-  </style>
-</head>
-<body>
-
+  <!-- DEALER APPLICATION BUTTON -->
   <div class="button-container">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDZaJofGq8-nay0Tf9ov9UHuLnPfspv9DncbRyTopjNsn6mg/viewform?usp=header
-" target="_blank" class="apply-button">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDZaJofGq8-nay0Tf9ov9UHuLnPfspv9DncbRyTopjNsn6mg/viewform?usp=header"
+       target="_blank" class="apply-button">
       Apply to Become a Dealer
     </a>
+  </div>
 
+  <!-- FAQ TOGGLE SCRIPT -->
   <script>
     document.querySelectorAll('.faq-question').forEach((q) => {
       q.addEventListener('click', () => {
@@ -316,5 +214,6 @@
       });
     });
   </script>
+
 </body>
 </html>
