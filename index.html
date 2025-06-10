@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
+
     body {
       margin: 0;
       padding: 20px;
@@ -18,6 +19,7 @@
       margin-right: auto;
       line-height: 1.6;
     }
+
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -29,7 +31,11 @@
       z-index: 1000;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .nav-logo { height: 50px; }
+
+    .nav-logo {
+      height: 50px;
+    }
+
     .nav-menu {
       display: flex;
       list-style: none;
@@ -37,7 +43,11 @@
       margin: 0;
       padding: 0;
     }
-    .nav-menu li { position: relative; }
+
+    .nav-menu li {
+      position: relative;
+    }
+
     .nav-menu a {
       text-decoration: none;
       color: #1e2a38;
@@ -46,7 +56,11 @@
       padding: 8px 4px;
       transition: color 0.2s;
     }
-    .nav-menu a:hover { color: #0056b3; }
+
+    .nav-menu a:hover {
+      color: #0056b3;
+    }
+
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -59,161 +73,80 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
       z-index: 1001;
     }
-    .dropdown-menu li a {
-      display: block;
-      padding: 10px 16px;
-      color: #003d80;
+
+    /* Contact Section Styling */
+    .contact-section {
+      background-color: #ffffff;
+      padding: 30px 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 40px;
     }
-    .dropdown:hover .dropdown-menu { display: block; }
-    header, section {
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 8px;
-      padding: 24px 32px;
-      margin-bottom: 32px;
-      box-shadow: 0 4px 6px rgba(30, 42, 56, 0.05);
-    }
-    h1, h2 {
-      color: #003d80;
+
+    .contact-section h2 {
       margin-top: 0;
+      color: #1e2a38;
     }
-    h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      text-align: center;
+
+    .contact-section p {
+      margin: 8px 0;
     }
-    h2 {
-      font-weight: 600;
-      font-size: 1.75rem;
-      text-align: center;
-    }
-    p, ul {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    ul { padding-left: 1.2rem; }
-    ul li { margin-bottom: 6px; }
-    .faq-item {
-      max-width: 700px;
-      margin: 16px auto;
-      border-bottom: 1px solid #ddd;
-    }
-    .faq-question {
-      font-weight: 600;
-      cursor: pointer;
-      padding: 12px 0;
+
+    .contact-section a {
       color: #0056b3;
-    }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      color: #333;
-      padding-bottom: 0;
-    }
-    .faq-item.open .faq-answer {
-      max-height: 300px;
-      padding-bottom: 12px;
-    }
-    .btn {
-      display: inline-block;
-      background: #0056b3;
-      color: white;
       text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      cursor: pointer;
-      margin: 8px auto;
     }
-    .btn:hover, .btn:focus { background: #003d80; }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #0056b3;
-      color: #0056b3;
-    }
-    .btn-outline:hover {
-      background: #0056b3;
-      color: white;
-    }
+
     .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 12px;
+      margin-top: 20px;
     }
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
-      max-width: 800px;
-      margin: 0 auto;
+
+    .contact-buttons button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 12px;
+      font-weight: 600;
     }
-    .color-card {
-      text-align: center;
-    }
-    .color-swatch {
-      width: 100%;
-      height: 100px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    @media (max-width: 720px) {
-      .nav-menu { flex-wrap: wrap; gap: 12px; }
+
+    .contact-buttons button:hover {
+      background-color: #0056b3;
     }
   </style>
 </head>
 <body>
-  <!-- NAVIGATION BAR -->
+
+  <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="nav-left">
-      <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
-    </div>
+    <img src="logo.png" alt="Calyco Logo" class="nav-logo">
     <ul class="nav-menu">
       <li><a href="#">Home</a></li>
       <li><a href="#">About Us</a></li>
-      <li class="dropdown">
-        <a href="#">Coatings ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="#latex">Latex Paint</a></li>
-          <li><a href="#sealer">Stain & Sealer</a></li>
-        </ul>
-      </li>
-     
+      <li><a href="#">Coatings</a></li>
       <li><a href="#">Investors</a></li>
-      <li><a href="#contact">Contacts</a></li>
+      <li><a href="#">Contacts</a></li>
     </ul>
   </nav>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Innovative Paint & Sealer Solutions</h1>
-    <p style="text-align:center; font-size: 1.2rem; color: #666;">Premium Protection. Lasting Results.</p>
-    <div style="text-align:center; margin-top: 16px;">
-      <a href="https://wa.me/919958966881" target="_blank" class="btn">Enquire on WhatsApp</a>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p>B37, Sector 1, Noida, NCR</p>
+    <p>Phone: +91-99589-66881</p>
+    <p>Email: <a href="mailto:calycoproducts1@gmail.com">calycoproducts1@gmail.com</a></p>
+
+    <div class="contact-buttons">
+      <button onclick="window.location.href='https://wa.me/919958966881'">WhatsApp</button>
+      <button onclick="window.location.href='mailto:calycoproducts1@gmail.com'">Email</button>
     </div>
-  </header>
+  </section>
 
- <!-- LATEX PAINT SECTION -->
-<section id="latex" style="text-align: center;">
-  <h2>Latex Paint</h2>
-  <img src="latex.jpg" alt="Latex Paint" style="width: 300px; height: auto;" />
-  <p style="max-width: 600px; margin: auto;">
-    Calyco Latex Paint offers superior coverage and exceptional durability for interior and exterior surfaces.
-    Ideal for a variety of surfaces like plaster, drywall, and wood. It provides excellent protection against moisture and stains.
-  </p>
-</section>
+</body>
+</html>
 
-<!-- STAIN & SEALER SECTION -->
-<section id="sealer" style="text-align: center; margin-top: 40px;">
-  <h2>Stain & Sealer</h2>
-  <img src="Sealer.jpg" alt="Stain & Sealer" style="width: 300px; height: auto;" />
-  <p style="max-width: 600px; margin: auto;">
-    Our Stain & Sealer provides long-lasting protection against stains, dirt, and moisture while offering a beautiful, glossy finish.
-    Perfect for high-traffic areas and outdoor applications.
-  </p>
-</section>
 
   <!-- LATEX PAINT FAQ SECTION -->
 <section id="latex-faq">
