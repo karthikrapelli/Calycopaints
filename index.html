@@ -7,18 +7,16 @@
   <title>Calyco Paints - Innovative Paint & Sealer Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
-      padding: 20px;
+      padding: 0;
       font-family: 'Montserrat', sans-serif;
-      color: #1e2a38;
-      background: url('Background.jpg') center center / cover no-repeat fixed;
-      max-width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.6;
+      color: #333;
+      background-color: #f4f4f4;
     }
 
     .navbar {
@@ -26,30 +24,39 @@
       justify-content: space-between;
       align-items: center;
       background: #ffffff;
-      padding: 10px 32px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     }
-    .nav-logo { height: 50px; }
+
+    .nav-logo {
+      height: 50px;
+    }
+
     .nav-menu {
       display: flex;
       list-style: none;
-      gap: 24px;
-      margin: 0;
-      padding: 0;
+      gap: 20px;
     }
-    .nav-menu li { position: relative; }
+
+    .nav-menu li {
+      position: relative;
+    }
+
     .nav-menu a {
       text-decoration: none;
-      color: #1e2a38;
+      color: #333;
       font-weight: 600;
-      font-size: 0.95rem;
-      padding: 8px 4px;
-      transition: color 0.2s;
+      padding: 10px;
+      transition: color 0.3s;
     }
-    .nav-menu a:hover { color: #0056b3; }
+
+    .nav-menu a:hover {
+      color: #0056b3;
+    }
+
     .dropdown-menu {
       display: none;
       position: absolute;
@@ -59,53 +66,117 @@
       border: 1px solid #ddd;
       border-radius: 4px;
       min-width: 160px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       z-index: 1001;
     }
+
     .dropdown-menu li a {
       display: block;
       padding: 10px 16px;
       color: #003d80;
     }
-    .dropdown:hover .dropdown-menu { display: block; }
-    header, section {
-      background: rgba(255, 255, 255, 0.7);
-      border-radius: 8px;
-      padding: 24px 32px;
-      margin-bottom: 32px;
-      box-shadow: 0 4px 6px rgba(30, 42, 56, 0.05);
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
     }
-    h1, h2 {
-      color: #003d80;
-      margin-top: 0;
-    }
-    h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
+
+    .hero {
+      position: relative;
+      background-image: url('Background.jpg'); /* Replace with your hero image */
+      background-size: cover;
+      background-position: center;
+      padding: 100px 20px;
+      color: white;
       text-align: center;
     }
-    h2 {
+
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .hero .btn {
+      background-color: #0056b3;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      text-decoration: none;
       font-weight: 600;
-      font-size: 1.75rem;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+
+    .hero .btn:hover {
+      background-color: #003d80;
+    }
+
+    .section {
+      padding: 40px 20px;
+      background: #fff;
+      margin-bottom: 20px;
+    }
+
+    .section h2 {
       text-align: center;
+      font-size: 2rem;
+      color: #003d80;
+      margin-bottom: 20px;
     }
-    p, ul {
-      max-width: 700px;
-      margin: 0 auto;
+
+    .product-image {
+      max-width: 100%;
+      height: auto;
     }
-    ul { padding-left: 1.2rem; }
-    ul li { margin-bottom: 6px; }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #0056b3;
+      color: #0056b3;
+    }
+
+    footer {
+      background: #003d80;
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+    }
+
     .faq-item {
-      max-width: 700px;
       margin: 16px auto;
       border-bottom: 1px solid #ddd;
     }
+
     .faq-question {
       font-weight: 600;
       cursor: pointer;
       padding: 12px 0;
       color: #0056b3;
     }
+
     .faq-answer {
       max-height: 0;
       overflow: hidden;
@@ -113,67 +184,28 @@
       color: #333;
       padding-bottom: 0;
     }
+
     .faq-item.open .faq-answer {
       max-height: 300px;
       padding-bottom: 12px;
     }
-    .btn {
-      display: inline-block;
-      background: #0056b3;
-      color: white;
-      text-decoration: none;
-      padding: 12px 28px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s ease;
-      text-align: center;
-      cursor: pointer;
-      margin: 8px auto;
-    }
-    .btn:hover, .btn:focus { background: #003d80; }
-    .btn-outline {
-      background: transparent;
-      border: 2px solid #0056b3;
-      color: #0056b3;
-    }
-    .btn-outline:hover {
-      background: #0056b3;
-      color: white;
-    }
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 12px;
-    }
-    .color-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 16px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .color-card {
-      text-align: center;
-    }
-    .color-swatch {
-      width: 100%;
-      height: 100px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
+
     @media (max-width: 720px) {
-      .nav-menu { flex-wrap: wrap; gap: 12px; }
+      .nav-menu {
+        flex-wrap: wrap;
+        gap: 12px;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
- <!-- NAVIGATION BAR -->
+  <!-- NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-left">
-      <img src="logo.jpg" alt="Calyco Logo" class="nav-logo" />
+      <img src="logo.png" alt="Calyco Logo" class="nav-logo" /> <!-- Replace with your logo -->
     </div>
     <ul class="nav-menu">
       <li><a href="#">Home</a></li>
@@ -185,98 +217,105 @@
           <li><a href="#sealer">Stain & Sealer</a></li>
         </ul>
       </li>
-      
       <li><a href="#">Investors</a></li>
-      <li><a href="#contact">Contacts</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-
-
-  <!-- HEADER -->
-  <header>
-    <h1>Innovative Paint & Sealer Solutions</h1>
-    <p style="text-align:center; font-size: 1.2rem; color: #666;">Premium Protection. Lasting Results.</p>
-    <div style="text-align:center; margin-top: 16px;">
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Innovative Paint & Sealer Solutions</h1>
+      <p>Premium Protection. Lasting Results.</p>
       <a href="https://wa.me/919958966881" target="_blank" class="btn">Enquire on WhatsApp</a>
     </div>
   </header>
 
   <!-- LATEX PAINT SECTION -->
-  <section id="latex">
+  <section id="latex" class="section">
     <h2>Latex Paint</h2>
-    <img src="latex.jpg" alt="Latex Paint" style="max-width: 100%; height: auto;" />
+    <img src="latex.jpg" alt="Latex Paint" class="product-image" /> <!-- Replace with your image -->
     <p>Calyco Latex Paint offers superior coverage and exceptional durability for interior and exterior surfaces. Ideal for plaster, drywall, and wood with excellent protection against moisture and stains.</p>
+
+    <!-- Latex Paint FAQs -->
+    <div class="faq-item">
+      <div class="faq-question">Where can I use it?</div>
+      <div class="faq-answer">Interior plaster, drywall, brick, painted walls.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Application?</div>
+      <div class="faq-answer">Roller, brush, or airless spray.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Dry time?</div>
+      <div class="faq-answer">Touch dry in 30 min–2 hrs, recoat after 1–2 hrs.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Coverage?</div>
+      <div class="faq-answer">10–12 m² per liter (1 coat).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">New colors?</div>
+      <div class="faq-answer">Use universal colorant (5–10%).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Patchy finish?</div>
+      <div class="faq-answer">Apply another even coat after primer.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">For humid areas?</div>
+      <div class="faq-answer">Use Stain & Sealer on seams.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Durability?</div>
+      <div class="faq-answer">10+ years with proper prep.</div>
+    </div>
   </section>
 
   <!-- STAIN & SEALER SECTION -->
-  <section id="sealer">
+  <section id="sealer" class="section">
     <h2>Stain & Sealer</h2>
-    <img src="Sealer.jpg" alt="Stain & Sealer" style="max-width: 100%; height: auto;" />
-    <p>Our Stain & Sealer provides long-lasting protection against stains, dirt, and moisture while offering a beautiful, glossy finish. Perfect for outdoor use.</p>
+    <img src="sealer.jpg" alt="Stain & Sealer" class="product-image" /> <!-- Replace with your image -->
+    <p>Our Stain & Sealer provides long-lasting protection against stains, dirt, and moisture while offering a beautiful glossy finish. Perfect for outdoor use.</p>
+
+    <!-- Stain & Sealer FAQs -->
+    <div class="faq-item">
+      <div class="faq-question">Where to use?</div>
+      <div class="faq-answer">Driveways, roofs, joints, windows, masonry, etc.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Professional finish?</div>
+      <div class="faq-answer">Clean surface, stir, apply, 24–48 hrs cure.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Benefits?</div>
+      <div class="faq-answer">Waterproofs, seals, UV & mildew resistance.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Durability?</div>
+      <div class="faq-answer">5–10 years (18 months extreme).</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Different from others?</div>
+      <div class="faq-answer">UV protection, easy application.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Temperature?</div>
+      <div class="faq-answer">5°C to 40°C ideal for application.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Mold resistant?</div>
+      <div class="faq-answer">Yes, anti-microbial.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Where NOT to use?</div>
+      <div class="faq-answer">Oily surfaces, swimming pools.</div>
+    </div>
   </section>
 
-  <!-- LATEX FAQ -->
-  <section id="latex-faq">
-    <h2>Latex Paint FAQs</h2>
-    <ul>
-      <li><strong>Where can I use it?</strong> Interior plaster, drywall, brick, painted walls.</li>
-      <li><strong>Application?</strong> Roller, brush, or airless spray.</li>
-      <li><strong>Dry time?</strong> Touch dry in 30 min–2 hrs, recoat after 1–2 hrs.</li>
-      <li><strong>Coverage?</strong> 10–12 m² per liter (1 coat).</li>
-      <li><strong>New colors?</strong> Use universal colorant (5–10%).</li>
-      <li><strong>Patchy finish?</strong> Apply another even coat after primer.</li>
-      <li><strong>For humid areas?</strong> Use Stain & Sealer on seams.</li>
-      <li><strong>Durability?</strong> 10+ years with proper prep.</li>
-    </ul>
-  </section>
-
-  <!-- SEALER FAQ -->
-  <section id="sealer-faq">
-    <h2>Stain & Sealer FAQs</h2>
-    <ul>
-      <li><strong>Where to use?</strong> Driveways, roofs, joints, windows, masonry, etc.</li>
-      <li><strong>Professional finish?</strong> Clean surface, stir, apply, 24–48 hrs cure.</li>
-      <li><strong>Benefits?</strong> Waterproofs, seals, UV & mildew resistance.</li>
-      <li><strong>Durability?</strong> 5–10 years (18 months extreme).</li>
-      <li><strong>Different from others?</strong> UV protection, easy application.</li>
-      <li><strong>Temperature?</strong> 5°C to 40°C ideal for application.</li>
-      <li><strong>Mold resistant?</strong> Yes, anti-microbial.</li>
-      <li><strong>Where NOT to use?</strong> Oily surfaces, swimming pools.</li>
-    </ul>
-  </section>
-
-<section id="partner-with-us" style="padding: 2rem; font-family: Arial, sans-serif; background-color: #f5f5f5; color: #333;">
-  <div style="max-width: 900px; margin: auto;">
-    <h2 style="color: #1e3a8a;">🤝 Partner With Calyco Paints</h2>
-    <h3>Premium Paint Supply for Contractors, Builders & Service Platforms</h3>
-
-    <p>Are you a contractor, builder, or home services provider like NoBroker? Join hands with <strong>Calyco Paints</strong> and offer your customers premium-quality paints with superior finish and durability.</p>
-
-    <h4>Why Partner With Us?</h4>
-    <ul>
-      <li>✅ <strong>Low-VOC / Zero-VOC Paints</strong> – Healthier indoor spaces</li>
-      <li>✅ <strong>High Coverage & Durability</strong> – Fewer repaints, more satisfied customers</li>
-      <li>✅ <strong>Bulk Rates</strong> – Competitive pricing for partners</li>
-      <li>✅ <strong>Customized Colors</strong> – Tailored to your project’s needs</li>
-      <li>✅ <strong>Professional Support</strong> – Dedicated B2B coordination team</li>
-      <li>✅ <strong>Trial Offers</strong> – Start with a no-obligation trial batch on your projects</li>
-    </ul>
-
-    <h4>📞 Let’s Connect:</h4>
-    <p>Email: <a href="mailto:calycopaints@gmail.com">calycopaints@gmail.com</a><br>
-       WhatsApp: <a href="https://wa.me/919958966881">+91 9958966881</a><br>
-       Website: <a href="https://karthikrapelli.github.io/Calycopaints">https://www.calycopaints.in/</a>
-    </p>
-
-    <p style="margin-top: 1rem; background-color: #1e3a8a; color: #fff; padding: 0.75rem; border-radius: 5px; display: inline-block;">🚀 <strong>Special Offer for NoBroker Partners:</strong> Trial on 5–10 projects in Delhi NCR. Get in touch today!</p>
-  </div>
-</section>
-
-
-
-  <!-- CONTACT -->
-  <section id="contact" style="text-align:center;">
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
     <h2>Contact Us</h2>
     <p>B37, Sector 1, Noida, NCR</p>
     <p>Phone: +91-99589-66881</p>
@@ -287,16 +326,13 @@
     </div>
   </section>
 
-  <!-- DEALER APPLICATION BUTTON -->
-  <div class="button-container">
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDZaJofGq8-nay0Tf9ov9UHuLnPfspv9DncbRyTopjNsn6mg/viewform?usp=header"
-       target="_blank" class="apply-button">
-      Apply to Become a Dealer
-    </a>
-  </div>
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Calyco Paints | All Rights Reserved</p>
+  </footer>
 
-  <!-- FAQ TOGGLE SCRIPT -->
   <script>
+    // FAQ Toggle or other JS here if needed
     document.querySelectorAll('.faq-question').forEach((q) => {
       q.addEventListener('click', () => {
         q.parentElement.classList.toggle('open');
@@ -305,4 +341,5 @@
   </script>
 
 </body>
+
 </html>
