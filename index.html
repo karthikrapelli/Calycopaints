@@ -3,19 +3,87 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calyco Paints - FAQ & Contact</title>
+  <title>Calyco Paints - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: url('Background.png') no-repeat center center fixed;
-      background-size: cover;
+      font-family: 'Montserrat', sans-serif;
       color: #333;
     }
+
+    .hero {
+      height: 100vh;
+      background: url('background.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px;
+      color: #fff;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background-color: #efe7dd;
+      color: #000;
+      padding: 14px 28px;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      z-index: 2;
+    }
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: 600;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
     .section {
       padding: 60px 20px;
     }
+
     .faq-section {
       max-width: 800px;
       margin: auto;
@@ -24,6 +92,7 @@
       padding: 40px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
     .faq-item {
       margin-bottom: 20px;
       padding: 20px;
@@ -32,17 +101,43 @@
       background: #fff;
       transition: all 0.3s ease;
     }
+
     .faq-question {
       font-weight: bold;
       cursor: pointer;
     }
+
     .faq-answer {
       margin-top: 10px;
       display: none;
     }
+
     .faq-item.open .faq-answer {
       display: block;
     }
+
+    .product-section {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .product-box {
+      flex: 1 1 400px;
+      text-align: center;
+    }
+
+    .product-box img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
     #contact {
       background: url('your-contact-bg.jpg') no-repeat center center;
       background-size: cover;
@@ -63,29 +158,24 @@
       position: relative;
       z-index: 1;
     }
+
     .contact-buttons {
       margin-top: 20px;
     }
-    .btn {
-      background: #fff;
-      color: #000;
-      padding: 12px 20px;
-      text-decoration: none;
-      border-radius: 5px;
-      margin: 10px;
-      display: inline-block;
-    }
+
     .btn-outline {
       background: transparent;
       border: 2px solid #fff;
       color: #fff;
     }
+
     footer {
       background: #111;
       color: #fff;
       text-align: center;
       padding: 20px;
     }
+
     a {
       color: inherit;
     }
@@ -93,59 +183,104 @@
 </head>
 <body>
 
-<section class="faq-section section">
-  <div class="faq-item open">
-    <div class="faq-question">Application Steps?</div>
-    <div class="faq-answer">Clean surface, stir, apply, 24–48 hrs cure.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Benefits?</div>
-    <div class="faq-answer">Waterproofs, seals, UV & mildew resistance.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Durability?</div>
-    <div class="faq-answer">5–10 years (18 months extreme).</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Different from others?</div>
-    <div class="faq-answer">UV protection, easy application.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Temperature?</div>
-    <div class="faq-answer">5°C to 40°C ideal for application.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Mold resistant?</div>
-    <div class="faq-answer">Yes, anti-microbial.</div>
-  </div>
-  <div class="faq-item">
-    <div class="faq-question">Where NOT to use?</div>
-    <div class="faq-answer">Oily surfaces, swimming pools.</div>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="navbar">
+      <div class="logo">Calyco</div>
+      <nav>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="hero-content">
+      <h1>ELEVATE YOUR SPACE WITH PREMIUM PAINTS</h1>
+      <p>Durable, eco-friendly coatings for any project.</p>
+      <a href="#products" class="btn">SHOP NOW</a>
+    </div>
+  </section>
 
-<section id="contact" class="section">
-  <h2>Contact Us</h2>
-  <p>B37, Sector 1, Noida, NCR</p>
-  <p>Phone: +91-99589-66881</p>
-  <p>Email: <a href="mailto:calycopaints@gmail.com">calycopaints@gmail.com</a></p>
-  <div class="contact-buttons">
-    <a href="https://wa.me/919958966881" target="_blank" class="btn">WhatsApp</a>
-    <a href="mailto:calycopaints@gmail.com" class="btn btn-outline">Email</a>
-  </div>
-</section>
+  <!-- LATEX PAINT -->
+  <section id="products" class="section">
+    <div class="product-section">
+      <div class="product-box">
+        <img src="latex.jpg" alt="Latex Paint">
+        <h3>Latex Paint</h3>
+        <p>Interior/Exterior, subtle sheen, stain-blocking, low-VOC, one-coat finish.</p>
+      </div>
+      <div class="faq-section">
+        <div class="faq-item open">
+          <div class="faq-question">Where to use?</div>
+          <div class="faq-answer">Primarily for interiors, suitable for light-tone exteriors.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Durability?</div>
+          <div class="faq-answer">10+ years indoors under normal conditions.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Finish?</div>
+          <div class="faq-answer">Subtle matte, above flat but below eggshell.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">VOC content?</div>
+          <div class="faq-answer">Very low — water-based for easy cleanup and safety.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Calyco Paints | All Rights Reserved</p>
-</footer>
+  <!-- STAIN & SEALER -->
+  <section class="section">
+    <div class="product-section">
+      <div class="product-box">
+        <img src="Sealer.jpg" alt="Stain and Sealer">
+        <h3>Stain & Sealer</h3>
+        <p>Multi-surface coating for concrete, metal, wood; flexible, breathable, waterproof.</p>
+      </div>
+      <div class="faq-section">
+        <div class="faq-item open">
+          <div class="faq-question">Which surfaces?</div>
+          <div class="faq-answer">Concrete, metal, wood, plaster, asphalt, tile.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Finish?</div>
+          <div class="faq-answer">Dead flat or near flat finish.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Durability?</div>
+          <div class="faq-answer">5–10 years outdoors (18+ months in harsh conditions).</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question">Special features?</div>
+          <div class="faq-answer">Anti-corrosive, UV-resistant, breathable, flexible, waterproof.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<script>
-  document.querySelectorAll('.faq-question').forEach((q) => {
-    q.addEventListener('click', () => {
-      q.parentElement.classList.toggle('open');
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>B37, Sector 1, Noida, NCR</p>
+    <p>Phone: +91-99589-66881</p>
+    <p>Email: <a href="mailto:calycopaints@gmail.com">calycopaints@gmail.com</a></p>
+    <div class="contact-buttons">
+      <a href="https://wa.me/919958966881" target="_blank" class="btn">WhatsApp</a>
+      <a href="mailto:calycopaints@gmail.com" class="btn btn-outline">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Calyco Paints | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach((q) => {
+      q.addEventListener('click', () => {
+        q.parentElement.classList.toggle('open');
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
